@@ -20,9 +20,9 @@ const Logo = () => {
                 </a>
                 <h1>Thailand2Space</h1>
                 <div className="card">
-                    <p>
+                    <div className='p2'>
                         {languageIs === 'en' ? 'In 2023, the mission is on!' : 'ในปี ๒๕๖๖ ภารกิจใด้เริ่มขึ่นแล้ว!'} 
-                    </p>
+                    </div>
                 </div>
             </div>
         </ButtonStateProvider>

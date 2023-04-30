@@ -23,7 +23,7 @@
 /* logo */
 
 .logo {
-  height: 9em;
+  height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
@@ -39,7 +39,10 @@
 
 .card {
   padding: 2em;
+  max-width: 100%;
 }
+
+
 
 .read-the-docs {
   color: rgba(255, 255, 255, 0.87);
@@ -50,6 +53,12 @@
 }
 
 p {
+  font-size: 1.2em;
+  margin-top: 1em;
+  text-align: start;
+}
+
+.p2 {
   font-size: 1.2em;
   margin-top: 1em;
 }
@@ -107,9 +116,7 @@ a:hover {
 
 body {
   margin: 0;
-  place-items: center;
   min-width: 320px;
-  min-height: 100vh;
 }
 
 /* button */
@@ -157,6 +164,11 @@ button:focus-visible {
 
 @media screen and (min-width: 768px){
   .header{justify-content: space-between;}
+  .logo{height: 9em;}
+  h1 {
+    font-size: 4em;
+  }
+  
 }
 
 @keyframes logo-spin {
