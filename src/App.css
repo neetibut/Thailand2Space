@@ -1,10 +1,26 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   padding-bottom: 6em;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: linear-gradient(#242424, #9198e5);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
+
+/* logo */
 
 .logo {
   height: 9em;
@@ -12,26 +28,13 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }
 
 .card {
@@ -51,11 +54,12 @@ p {
   margin-top: 1em;
 }
 
-.header {
+/* header */
+
+.header { 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  /* background-color: #333; */
   padding: 1rem;
 }
 
@@ -88,42 +92,7 @@ p {
   text-decoration: underline;
 }
 
-.background-image-container {
-  background-image: url('https://cdn.midjourney.com/f9b8493f-4f87-4a4e-b1d2-9ee6dc900ce6/0_1.png'); /* Replace with your own image URL */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 500px; /* Adjust height according to your requirements */
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-top: 2em;
-}
-
-.content {
-  text-align: center;
-  color: #ffffff; /* Adjust text color as needed */
-}
-
-/* Testing */
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  /* background-color: #242424; */
-  background: linear-gradient(#242424, #9198e5);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+/* achor element */
 
 a {
   font-weight: 500;
@@ -134,6 +103,8 @@ a:hover {
   color: #535bf2;
 }
 
+/* text */
+
 body {
   margin: 0;
   place-items: center;
@@ -141,10 +112,7 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 4em;
-  line-height: 1.1;
-}
+/* button */
 
 button {
   margin-top: 0.1em;
@@ -166,6 +134,14 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* media query */
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -179,33 +155,8 @@ button:focus-visible {
   }
 }
 
-/* my css */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  padding-bottom: 6em;
-}
-
-.logo {
-  height: 9em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@media screen and (min-width: 768px){
+  .header{justify-content: space-between;}
 }
 
 @keyframes logo-spin {
@@ -216,86 +167,5 @@ button:focus-visible {
     transform: rotate(360deg);
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: rgba(255, 255, 255, 0.87);
-  font-size: 1em;
-  padding-bottom: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-p {
-  font-size: 1.2em;
-  margin-top: 1em;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
-
-.header-title {
-  color: #fff;
-  margin: 0;
-}
-
-.header-nav {
-  margin: 0;
-}
-
-.header-nav-list {
-  display:flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.header-nav-item {
-  margin-left: 1rem;
-  
-}
-
-.header-nav-item a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.header-nav-item a:hover {
-  text-decoration: underline;
-}
-
-.background-image-container {
-  background-image: url('https://cdn.midjourney.com/f9b8493f-4f87-4a4e-b1d2-9ee6dc900ce6/0_1.png'); /* Replace with your own image URL */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 500px; /* Adjust height according to your requirements */
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-top: 2em;
-}
-
-.content {
-  text-align: center;
-  color: #ffffff; /* Adjust text color as needed */
-}
-
-
-
 
 

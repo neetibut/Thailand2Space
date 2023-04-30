@@ -11,7 +11,6 @@ function App() {
 
     const Header = () => {
       return (
-
         <header className="header">
           <nav className="header-nav">
             <ul className="header-nav-list">
@@ -26,13 +25,13 @@ function App() {
 
   return (
     <ButtonStateProvider>
-    <div>
-      <Header />
-    </div>
-      <Logo />
-      <IntroText />
-      <FooterText />
-      </ButtonStateProvider>
+      <div>
+        <Header />
+        <Logo />
+        <IntroText />
+        <FooterText />
+      </div>
+    </ButtonStateProvider>
   )
 }
 
