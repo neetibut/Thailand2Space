@@ -1,3 +1,7 @@
+* {
+  margin: 0
+}
+
 #root {
   max-width: 100%;
   margin: 0 auto;
@@ -33,29 +37,39 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
+.logo2 {
+  height: 20em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo2:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 .card {
+  display: flex;
+  justify-content: center;
   padding: 2em;
   max-width: 100%;
 }
 
-
-
 .read-the-docs {
   color: rgba(255, 255, 255, 0.87);
   font-size: 1em;
-  padding-bottom: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 1em;
+  max-width: 950px;
 }
 
 p {
   font-size: 1.2em;
   margin-top: 1em;
   text-align: start;
+  max-width: 728px;
 }
 
 .p2 {
@@ -114,9 +128,11 @@ a:hover {
 
 /* text */
 
-body {
-  margin: 0;
-  min-width: 320px;
+.text-container {
+  /* min-width: 320px;
+  max-width: 728px; */
+  display: flex;
+  flex-direction: column;
 }
 
 /* button */
@@ -168,6 +184,7 @@ button:focus-visible {
   h1 {
     font-size: 4em;
   }
+  .logo2 {height: 50em}
   
 }
 

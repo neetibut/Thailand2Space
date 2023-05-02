@@ -7,7 +7,7 @@ const IntroText = () => {
 
     return(
         <ButtonStateProvider>
-        <body>
+        <div className='text-container'>
         <div className="card">
         <p>
           {languageIs === 'en' ? 'Thailand2Space is currently a member-funded research and development group of multidiscipline professionals lead by engineers, entrepreneurs, architects and artists. We are working on a master plan to design, build and operate Thailand\'s first spaceport for space tourism. We aim to establish partnerships with Virgin Galactic, Blue Origin and SpaceX to provide commercial spaceflight service from Thailand by 2030.' 
@@ -24,7 +24,7 @@ const IntroText = () => {
           {languageIs === 'en' ? 'Our preliminary research is now available to read via our weekly newsletter on Substack. Free subscription will keep you updated with our progress. A paid-subscription will help fund the Thailand2Space mission!' : 'การวิจัยเบื้องต้นของเราตอนนี้มีให้อ่านได้ผ่านจดหมายข่าวสัปดาห์ล่าสุดของเราบน Substack การสมัครสมาชิกฟรีจะช่วยให้คุณได้รับข่าวสารตามความก้าวหน้าของเรา การสมัครสมาชิกแบบจ่ายเงินจะช่วยให้เราได้เงินทุนสนับสนุนภารกิจ Thailand2Space!'} 
         </p>
       </div>
-      </body></ButtonStateProvider>
+      </div></ButtonStateProvider>
     )
 }
 
