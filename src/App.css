@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'D-DIN Regular';
+  src: url('../public/fonts/d-din/D-DIN.otf') format('opentype'); /* Update the URL if your font file is in a different location */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
   margin: 0
 }
@@ -8,8 +16,9 @@
   padding: 2rem;
   text-align: center;
   padding-bottom: 6em;
-
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font: 16px/26px D-DIN Regular, Arial, Verdana, sans-serif; */
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */  
+  font-family: 'D-DIN Regular', Arial, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -23,6 +32,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+
 
 /* logo */
 
@@ -66,6 +77,7 @@
 }
 
 p {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 1.2em;
   margin-top: 1em;
   text-align: start;
@@ -73,36 +85,37 @@ p {
 }
 
 .p2 {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+
+.p3 {
+  font-family: 'D-DIN Regular', Arial, Verdana, sans-serif;
   font-size: 1.2em;
   margin-top: 1em;
 }
 
 /* header */
 
-.header { 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-.header-title {
-  color: #fff;
-  margin: 0;
-}
-
 .header-nav {
+  display: block;
+  width: 100%;
   margin: 0;
 }
 
 .header-nav-list {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 70%;
+  justify-content: center;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
 .header-nav-item {
+  flex: 1;
   margin-left: 1rem;
 }
 
@@ -179,7 +192,7 @@ button:focus-visible {
 }
 
 @media screen and (min-width: 768px){
-  .header{justify-content: space-between;}
+  .header{justify-content: center}
   .logo{height: 9em;}
   h1 {
     font-size: 4em;

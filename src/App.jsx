@@ -1,38 +1,40 @@
-import React, { useState,  } from 'react'
+import React, { useState} from 'react'
+
 import './App.css'
+import { ScrollProvider } from './context/ScrollContext'
 
 import Logo from './components/Logo'
-import IntroText from './components/IntroText'
-import CustomButton from './components/CustomButton'
-import ButtonStateProvider from './ButtonStateProvider'
-import FooterText from './components/FooterText'
+import CustomButton from './components/Sections/CustomButton'
+import ButtonStateProvider from './context/ButtonStateProvider'
+import FooterText from './components/Sections/FooterText'
+
+
+
+import { AboutText } from './components/Sections/About'
+import { MissionText } from './components/Sections/Mission'
+import { UpdatesText } from './components/Sections/Updates'
+import { JoinText } from './components/Sections/Join'
+import { InvestText } from './components/Sections/Invest'
+import Header from './components/Features/Header'
+
+
 
 function App() {
-
-    const Header = () => {
-      return (
-        <header className="header">
-          <nav className="header-nav">
-            <ul className="header-nav-list">
-              <li className="header-nav-item">
-                <CustomButton />
-              </li>
-            </ul>
-          </nav>
-        </header>
-      );
-    };
-
-    
-
   return (
     <ButtonStateProvider>
-      <div>
-        <Header />
-        <Logo />
-        <IntroText />
-        <FooterText />
-      </div>
+      <ScrollProvider>
+        <div>
+          <Header />
+          <Logo />
+          <CustomButton />
+          <AboutText />
+          <MissionText />
+          <UpdatesText />
+          <JoinText />
+          <InvestText />
+          <FooterText />
+        </div>
+      </ScrollProvider>
     </ButtonStateProvider>
   )
 }
