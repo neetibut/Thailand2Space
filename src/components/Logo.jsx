@@ -21,12 +21,12 @@ const Logo = () => {
     return(
         <ButtonStateProvider>
             <div>
-            <div>
-                {/* <h1>Thailand2Space</h1> */}
-                <a href="https://thailand2space.com" target="_blank">
+                <div className='card'>
+                    <a href="https://thailand2space.com" target="_blank">
                     {/* <ImageDisplay src={myImage} className="logo" altText="Thailand2Space logo" /> */}
                     <img src={myImage} className="logo2" alt="Thailand2Space logo" />
-                </a></div>
+                    </a>
+                </div>
                 {/* <div>
                 <a href="https://vitejs.dev" target="_blank">
                     <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -37,9 +37,8 @@ const Logo = () => {
                 </div> */}
                 
                 <div ref={sectionRef_about} className="card">
-                    <div className='p2'>
-                    {languageIs === 'en' ? 'ABOUT US' : 'เกี่ยวกับพวกเรา'}
-                        {/* {languageIs === 'en' ? 'In 2023, the mission is on!' : 'ในปี ๒๕๖๖ ภารกิจใด้เริ่มขึ่นแล้ว!'}  */}
+                    <div className='header-text'>
+                        {languageIs === 'en' ? 'ABOUT US' : 'เกี่ยวกับพวกเรา'}
                     </div>
                 </div>
             </div>

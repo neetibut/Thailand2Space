@@ -4,7 +4,6 @@ import './App.css'
 import { ScrollProvider } from './context/ScrollContext'
 
 import Logo from './components/Logo'
-import CustomButton from './components/Sections/CustomButton'
 import ButtonStateProvider from './context/ButtonStateProvider'
 import FooterText from './components/Sections/FooterText'
 
@@ -26,7 +25,6 @@ function App() {
         <div>
           <Header />
           <Logo />
-          <CustomButton />
           <AboutText />
           <MissionText />
           <UpdatesText />

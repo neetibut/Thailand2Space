@@ -15,14 +15,16 @@ export const JoinBtn = () => {
 export const JoinText = () => {
     const { languageIs, toggleButtonState } = useContext(ButtonStateContext);
     const {sectionRef_join} = useScroll() 
+    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdk0OufU5j8tJX5c2Uf9-EonJMxO9HBkT121sqj8DpPeHsnbg/viewform?embedded=true'
+
     return (
         <ButtonStateProvider>
-        <div className='text-container'>
+        <div className='text-container' ref={sectionRef_join}>
             <div className='card'>
-                <p ref={sectionRef_join}>{languageIs === 'en' ? 'JOIN US' : 'สมัครงานกับพวกเรา'}</p>
+                <p className='header-text'>{languageIs === 'en' ? 'JOIN US' : 'สมัครงานกับพวกเรา'}</p>
             </div>
-            <div className='google-form'>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdk0OufU5j8tJX5c2Uf9-EonJMxO9HBkT121sqj8DpPeHsnbg/viewform?embedded=true" width="600" height="702" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <div className='card'>
+                <iframe src={googleFormUrl} width="480" height="640" frameborder="0">Loading…</iframe>
             </div>
         </div>
         

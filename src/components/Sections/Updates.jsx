@@ -15,13 +15,13 @@ export const UpdatesBtn = () => {
 
 export const UpdatesText = () => {
     const { languageIs, toggleButtonState } = useContext(ButtonStateContext);
-    const {sectionRef_updates} = useScroll() 
+    const {sectionRef_updates} = useScroll()
 
     return(
         <ButtonStateProvider>
         <div className='text-container'>
         <div ref={sectionRef_updates} className="card">
-                    <div className='p2'>
+                    <div className='header-text'>
                         {languageIs === 'en' ? 'UPDATES' : 'ความคืบหน้า'} 
                     </div>
                 </div>
